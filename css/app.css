@@ -34,7 +34,7 @@ button {
     font-weight: 700;
     cursor: pointer;
     padding: 6px 25px;
-    outline: none; 
+    outline: none;
 }
 
 /* Hacks */
@@ -168,6 +168,7 @@ header{
     }
     .login button{
         width: 100%;
+        padding: 13px; 
     }
 }
 
