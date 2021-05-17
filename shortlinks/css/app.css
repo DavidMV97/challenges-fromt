@@ -1,3 +1,146 @@
-body{
-    background: silver; 
+:root {
+ --container: 1440px;
+ --Cyan: hsl(180, 66%, 49%);
+ --DarkViolet: hsl(257, 27%, 26%);
+ --Red: hsl(0, 87%, 67%);
+ --Gray: hsl(0, 0%, 75%);
+ --GrayishViolet: hsl(257, 7%, 63%);
+ --VeryDarkBlue: hsl(255, 11%, 22%);
+ --VeryDarkViolet: hsl(260, 8%, 14%);
 }
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: var(--Gray);
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,p{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--gray);
+}
+button {
+    background: none;
+    border: none;
+    color: var(--Gray);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 6px 25px;
+}
+
+/* Hacks */
+.main-content{
+    width: 100%;
+    max-width:  var(--container);
+    margin: 0 auto;
+}
+.main-button{
+    background: aqua;
+    border-radius: 50px;
+    background: var(--Cyan);
+    color: white;
+}
+.main-button:hover{
+    background: hsl(180, 84%, 69%);
+}
+/* ********/
+
+/* Start Header */
+header{
+    position: relative;
+    display: flex;
+}
+.logo h1{
+    color: black;
+}
+.container-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.container-header.show-menu{
+    transform: translateY(75px);
+    background: var(--DarkViolet);
+    color: white;
+    border-radius: 5px;
+    opacity: 1;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 20px;
+}
+.navbar li {
+    margin-left: 20px;
+}
+.navbar a {
+    font-weight: 700;
+}
+.navbar li:hover a{
+    color: black;
+}
+/* End Header  */
+
+/* Hamburder Menu  */
+.menu-hamburguer{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+.menu-hamburguer span{
+    height: 3px;
+    display: block;
+    width: 22px;
+    margin: 3px 0;
+    background: black;
+}
+/* End Hamburguer Menu */
+
+/* Header Menu mobile */
+@media(max-width: 768px  ){
+    .logo{
+        position: absolute;
+        left: 0;
+    }
+    .container-header, .navbar, .navbar ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-header{
+        opacity: 0;
+        transform: translateY(-175px);
+        background: var(--DarkViolet);
+    }
+    .navbar ul,
+    .navbar li {
+        margin: 0;
+        padding: 0
+    }
+    .login button{
+        display: block;
+    }
+
+    .menu-hamburguer{
+        display: block;
+    }
+}
+
+
+/* End  Header Menu mobile */
