@@ -43,7 +43,7 @@ button {
     margin: 0 auto;
 }
 .main-button{
-    background: aqua;
+
     border-radius: 50px;
     background: var(--Cyan);
     color: white;
@@ -66,9 +66,10 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    transition: all 1s ease;
 }
 .container-header.show-menu{
-    transform: translateY(75px);
+    transform: translateY(55px);
     background: var(--DarkViolet);
     color: white;
     border-radius: 5px;
@@ -101,16 +102,32 @@ header{
     display: none;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 15px;
+    padding: 0;
 
 }
 .menu-hamburguer span{
-    height: 3px;
+    height: 4px;
     display: block;
-    width: 22px;
-    margin: 3px 0;
-    background: black;
+    width: 30px;
+    margin: 5px 0;
+    background: var(--Gray);
+    transition: all  1s ;
 }
+
+.menu-hamburguer.open span:nth-child(1) {
+    transform: rotate(38deg);
+    transform-origin: left top;
+}
+.menu-hamburguer.open span:nth-child(2) {
+    opacity: 0 ;
+    transform: rotateY(180deg);
+}
+.menu-hamburguer.open span:nth-child(3) {
+    transform: rotate(-38deg);
+    transform-origin: left bottom;
+}
+
 /* End Hamburguer Menu */
 
 /* Header Menu mobile */
@@ -127,6 +144,7 @@ header{
         opacity: 0;
         transform: translateY(-175px);
         background: var(--DarkViolet);
+        padding: 20px ;
     }
     .navbar ul,
     .navbar li {
@@ -135,10 +153,20 @@ header{
     }
     .login button{
         display: block;
+        color: white;
     }
 
     .menu-hamburguer{
         display: block;
+    }
+
+    .login{
+        width: 100%
+    }
+    .login button{
+        width: 100%;
+        margin-top: 20px;
+        border-top: 1px solid #ffffff24;
     }
 }
 
