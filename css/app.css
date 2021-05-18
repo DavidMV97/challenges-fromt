@@ -18,6 +18,10 @@ body{
 h1,h2,h3,h4,h5,h6,ul,li,p{
     margin: 0;
     padding: 0;
+    line-height: 70px;
+}
+p{
+    line-height: initial;
 }
 ul li{
     list-style: none;
@@ -44,7 +48,6 @@ button {
     margin: 0 auto;
 }
 .main-button{
-
     border-radius: 50px;
     background: var(--Cyan);
     color: white;
@@ -59,7 +62,7 @@ header{
     position: relative;
     display: flex;
 }
-.logo h1{
+.logo h2{
     color: black;
 }
 .container-header{
@@ -98,6 +101,10 @@ header{
 }
 /* End Header  */
 
+main{
+    position: relative;
+}
+
 /* Hamburder Menu  */
 .menu-hamburguer{
     display: none;
@@ -115,7 +122,6 @@ header{
     background: var(--Gray);
     transition: all  1s ;
 }
-
 .menu-hamburguer.open span:nth-child(1) {
     transform: rotate(38deg);
     transform-origin: left top;
@@ -128,8 +134,57 @@ header{
     transform: rotate(-38deg);
     transform-origin: left bottom;
 }
-
 /* End Hamburguer Menu */
+
+
+
+/**** Main image  ****/
+.img-hero{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.text-left{
+    width: 52%;
+}
+.text-left h1 {
+    color: black;
+    font-size: 66px;
+}
+.text-left p {
+    font-size: 26px;
+}
+.text-left .main-button {
+    margin-top: 25px;
+    padding: 12px 38px;
+    font-size: 25px;
+}
+.right-img img{
+    position: absolute;
+    right: 0;
+}
+@media(max-width: 1260px){
+    .img-hero{
+        align-items: center;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .text-left{
+        width: 100%;
+    }
+    .text-left .main-button{
+        margin-top: 60px;
+        padding: 29px 62px;
+        font-size: 29px;
+    }
+    .right-img img{
+        position: initial;
+        margin-bottom: 70px;
+    }
+   
+}
+/*** End Main image s***/
+
 
 /* Header Menu mobile */
 @media(max-width: 768px  ){
@@ -171,6 +226,5 @@ header{
         padding: 13px; 
     }
 }
-
 
 /* End  Header Menu mobile */
