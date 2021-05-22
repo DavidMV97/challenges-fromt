@@ -103,6 +103,8 @@ header{
 
 main{
     position: relative;
+    overflow: hidden;
+
 }
 
 /* Hamburder Menu  */
@@ -140,9 +142,11 @@ main{
 
 /**** Main image  ****/
 .img-hero{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 100% 1fr ;
+    grid-template-rows: 1fr 1fr;
     margin-top: 100px;
+    overflow: hidden;
 }
 .text-left{
     width: 52%;
@@ -161,8 +165,53 @@ main{
 }
 .right-img img{
     position: absolute;
-    right: 0;
+    right: -40px;
 }
+
+.input-short{
+    grid-row: 3;
+    background: url(../img/bg-shorten-desktop.svg) var(--DarkViolet);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-short input{
+    width: 83%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 13px;
+
+}
+.input-short .main-button{
+    height: 45px;
+    border-radius: 8px;
+}
+
+/* advanced statistics */
+.advanced-statistics{
+    background: hsla(0, 0%, 74.9%, 0.14);
+}
+.advanced-tittle{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.advanced-tittle h2 {
+    color: black;
+}
+.advanced-tittle p {
+    color: var(--Gray);
+}
+
+/*  End advanced statistics**/
+
 @media(max-width: 1260px){
     .img-hero{
         align-items: center;
@@ -181,7 +230,7 @@ main{
         position: initial;
         margin-bottom: 70px;
     }
-   
+
 }
 /*** End Main image s***/
 
@@ -223,7 +272,7 @@ main{
     }
     .login button{
         width: 100%;
-        padding: 13px; 
+        padding: 13px;
     }
 }
 

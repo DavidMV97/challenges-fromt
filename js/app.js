@@ -4,7 +4,10 @@ document.addEventListener( 'DOMContentLoaded' , () => {
 
     buttonMenu.addEventListener('click' , (e) => {
         e.preventDefault();
-        buttonMenu.classList.toggle('open'); 
+        buttonMenu.classList.toggle('open');
         menu.classList.toggle('show-menu');
     })
+
+
+
 } )
